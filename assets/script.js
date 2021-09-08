@@ -10,7 +10,7 @@ let exInputs = document.getElementsByTagName("input");
 //ADD Validation
 validate = () => {
     exInputs.addEventListener("change",function(){
-        if(exInputs == ""){
+        if(exInputs.value === ""){
             btn.disabled = true;
             return false;
         }     
@@ -22,7 +22,7 @@ validate = () => {
 }
 
 // display Output
-display = () => {
+// display = () => {
 
     btn.addEventListener("click", function() {
         var detailRow = document.createElement("td");
@@ -49,4 +49,4 @@ display = () => {
             tinfo.removeChild(tableRow);
          });     
     });
-}
+// }
