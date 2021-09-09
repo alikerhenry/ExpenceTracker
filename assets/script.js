@@ -3,7 +3,6 @@ let amount = document.getElementById("amount");
 let date = document.getElementById("date");
 
 let tinfo = document.getElementById("tData");
-let tableRow = document.getElementById("tRow");
 
 var exInputs = document.getElementsByTagName("input")[0];
 var exInputs = document.getElementsByTagName("input")[1];
@@ -28,7 +27,7 @@ validate = () => {
         var amountRow = document.createElement("td");
         var dateRow = document.createElement("td");
                 
-        tableRow = document.createElement("tr");
+        var tableRow = document.createElement("tr");
                          
         tableRow.appendChild(detailRow);
         tableRow.appendChild(amountRow);
