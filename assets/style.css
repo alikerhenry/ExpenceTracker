@@ -11,7 +11,21 @@ body{
 h1{
     text-align: center;
     font-weight: 600;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    font-family: monospace;
+}
+.dollar{
+    width:100%;
+    text-align: center;
+    z-index: -1;
+    background: rgba(50, 205, 50, 0.692);
+    position: relative;
+}
+b{
+    font-size: 800px;
+    color: rgba(0, 128, 0, 0.733);
+    position: sticky;
+    /* margin: 100px 500px 200px 600px; */
 }
 .container{
     width:100%;
@@ -20,6 +34,12 @@ h1{
     vertical-align: middle;
     flex-direction: column;
     align-self: center;
+    position: fixed;
+    margin-top: 50px;
+    left: 0;
+    top:0;
+    z-index: 1;
+    position: fixed;
 }
 .inputField{
     width:85%;
@@ -32,7 +52,7 @@ h1{
     margin-bottom: 5px;
     border: 2px solid green;
     border-radius: 15px;
-    background-image:repeating-linear-gradient(45deg, green,limegreen 15%,rgba(255, 255, 255, 0.753) 15% );
+    background-image:repeating-linear-gradient(45deg, rgb(22, 175, 22),limegreen 15%,rgba(255, 255, 255, 0.753) 15% );
     outline: none;
 }
 #amount{
@@ -61,7 +81,7 @@ table{
     margin-top: 20px;
     width: 90%;
     min-height: auto;
-    background-image:repeating-linear-gradient(45deg, rgb(22, 175, 22),limegreen 15%,rgba(255, 255, 255, 0.753) 15% );
+    background-image:repeating-linear-gradient(45deg, rgba(22, 175, 22, 0.733),rgba(50, 205, 50, 0.726) 15%,rgba(255, 255, 255, 0.644) 15% );
 }
 
 table,th,td{
