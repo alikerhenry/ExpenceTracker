@@ -3,33 +3,32 @@ let amount = document.getElementById("amount");
 let date = document.getElementById("date");
 
 let tinfo = document.getElementById("tData");
-let btn = document.getElementById("addExpence");
-let clear = document.getElementById("clear");
-let exInputs = document.getElementsByTagName("input");
+let tableRow = document.getElementById("tRow");
+
+var exInputs = document.getElementsByTagName("input")[0];
+var exInputs = document.getElementsByTagName("input")[1];
+var exInputs = document.getElementsByTagName("input")[2];
 
 //ADD Validation
 validate = () => {
-    exInputs.addEventListener("change",function(){
-        if(exInputs.value === ""){
-            btn.disabled = true;
+    exInputs.addEventListener("keypress",function(){
+        if(exInputs === ""){
+            tableRow.style.display = "none";
+        }
+        else{
             return false;
         }     
-        else{
-            btn.disabled = false;
-            return false;
-        }
     });
 }
 
 // display Output
-// display = () => {
 
-    btn.addEventListener("click", function() {
+    exInputs.addEventListener("keypress", function() {
         var detailRow = document.createElement("td");
         var amountRow = document.createElement("td");
         var dateRow = document.createElement("td");
                 
-        var tableRow = document.createElement("tr");
+        tableRow = document.createElement("tr");
                          
         tableRow.appendChild(detailRow);
         tableRow.appendChild(amountRow);
@@ -44,9 +43,16 @@ validate = () => {
         details.value = "";
         amount.value = "";
         date.value = "";
-            
-        clear.addEventListener("click", function() {
+
+        let erase = document.createElement("button");
+        erase.addEventListener("click",function() {
             tinfo.removeChild(tableRow);
-         });     
+        })
+        tableRow.appendChild(erase);
+        erase.innerText = "X"
+        erase.style.background = "red"
+        erase.style.color = "white"
+        erase.style.borderRadius = "20px"
+        erase.style.marginTop = "10px"
+        erase.style.border = "1px solid transparent"
     });
-// }
