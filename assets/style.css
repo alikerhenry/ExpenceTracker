@@ -2,10 +2,10 @@ body{
     height: 100%;
     width: 100%;
     box-sizing: border-box;
-    background-image: url("ExpenceTracker/assets/images/wildlife.jpg");
+    background-image: url("/assets/images/wildlife.jpg");
     background-repeat: no-repeat;
-    background-position: fixed;
-    background-attachment: center;
+    background-position:center;
+    background-attachment:fixed;
     background-size: 100%;
 }
 h1{
