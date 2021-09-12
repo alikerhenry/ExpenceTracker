@@ -12,11 +12,13 @@
         <b>$</b>
     </div>
     <div class="container">
-        <h1> Expence Tracker</h1>
+        <div class="header">
+            <h1> Expence Tracker</h1>
+        </div>
         <div class="inputField">
             <input type="text" id="details" placeholder="Details... " onchange="validate()" >
             <input type="number" id="amount" placeholder="USH" onchange="validate()">
-            <input type="date" id="date" onchange="validate()">
+            <input type="date" id="date" onchange="validate()" required>
         </div>
         <div class="tableData">
             <table>
