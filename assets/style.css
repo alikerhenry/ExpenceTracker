@@ -1,82 +1,106 @@
-body{
+*{
     box-sizing: border-box;
 }
+body{
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 h1{
+    color: black;
     text-align: center;
     font-weight: 600;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    font-family: monospace;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.521) ;
 }
-.expenceInputs{
+.dollar{
     width:100%;
-    display:flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
-    vertical-align: middle;
+    height: 100%;
+    text-align: center;
+    z-index: -1;
+    background: rgba(50, 205, 50, 0.692);
+    position: fixed;
 }
-.buttons{
-    display: inline;
+b{
+    font-size: 800px;
+    color: rgba(0, 128, 0, 0.733);
+    position: sticky;
+}
+.container{
+    width:100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    flex-direction: column;
+    align-self: center;
+    z-index: 1;
+    /* position: relative; */
+}
+.header{
+    width: 100%;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+}
+.inputField{
+    width:90%;
+    height: 150px;
+    position: sticky;
+    position: -webkit-sticky;
+    padding-top: 40px;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
 }
 #details{
-    width: 80%;
-    height: 30px;
-    font-size: 22px;
+    width: 90%;
+    height: 40px;
+    font-size: 25px;
     margin-bottom: 5px;
-    border: 1px solid green;
+    border: 2px solid green;
     border-radius: 15px;
+    background-image:repeating-linear-gradient(45deg, rgb(22, 175, 22),limegreen 15%,rgba(255, 255, 255, 0.753) 15% );
     outline: none;
 }
 #amount{
-    width: 40%;
-    height: 30px;
+    width: 39%;
+    height: 40px;
     font-size: 25px;
-    border: 1px solid green;
+    border: 2px solid green;
+    background-image:repeating-linear-gradient(45deg, rgb(22, 175, 22),limegreen 15%,rgba(255, 255, 255, 0.753) 15% );
     border-radius: 15px;
     outline: none;
 }
 #date{
-    width: 40%;
-    height: 30px;
+    width: 50%;
+    height: 40px;
     font-size: 25px;
-    border: 1px solid green;
+    border: 2px solid green;
+    background-image:repeating-linear-gradient(45deg, rgb(22, 175, 22),limegreen 15%,rgba(255, 255, 255, 0.753) 15% );
     border-radius: 15px;
     outline: none;
 }
-#addExpence{
-    width: 30px;
-    height: 30px;
-    font-size: 22px;
-    color: white;
-    background:rgb(5, 114, 5);
-    border: 1px solid transparent;
-    border-radius: 5px;
-}
-#addExpence:hover{
-    cursor: pointer;
-    background: rgb(13, 158, 13);
-}
-#clear{
-    width:66px;
-    height: 30px;
-    font-size: 22px;
-    color: white;
-    background: rgb(165, 12, 12);
-    border: 1px solid transparent;
-    border-radius: 5px;
-}
-#clear:hover{
-    cursor: pointer;
-    background: rgb(231, 59, 59);
+.tableData{
+    width: 85%;
+    display: flex;
 }
 table{
-    margin-top: 10px;
+    margin-top: 20px;
     width: 90%;
-    height: 5em;
+    min-height: auto;
+    background-image:repeating-linear-gradient(45deg, rgba(22, 175, 22, 0.733),rgba(50, 205, 50, 0.726) 15%,rgba(255, 255, 255, 0.644) 15% );
 }
 
 table,th,td{
-    border: 1px solid black;
+    border: 2px solid black;
     padding: 5px;
     text-align: center;
     font-size: 20px;
+    font-weight: 600;
 }
